@@ -407,21 +407,24 @@ public class ArraysX {
 
 	}
 
-	public static double[] toArray(ArrayList<Double> arrList) {
-		Double[] Darr = arrList.toArray(new Double[arrList.size()]);
-		double[] ans = new double[Darr.length];
+	public static String[] toArray(ArrayList<String> arrList) {
+		String[] Sarr = arrList.toArray(new String[arrList.size()]);
+		String[] ans = new String[Sarr.length];
 
-		for(int i = 0; i < Darr.length; i++){
-			ans[i] = Darr[i];
+		for(int i = 0; i < Sarr.length; i++){
+			ans[i] = Sarr[i];
 		}
 
 		return ans;
 	}
 
+	
+	
 	public static void writeCSV(String filename, double[] arr) {
 		writeCSV(filename, parseString(arr));
 	}
 
+	
 	public static void writeCSV(String filename, double[][] dat) {
 
 		String[][] strArr = new String[dat.length][dat[0].length];

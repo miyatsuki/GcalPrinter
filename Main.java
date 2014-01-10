@@ -30,11 +30,12 @@ public class Main {
 	public static void main(String[] args){
 
 		ICSparser icsp = new ICSparser();
-		String[] fileList = new String[3];
-		//0 = 就活, 1 = バイト, 2 = 授業
-		fileList[0] = "https://www.google.com/calendar/ical/21gl2ihvhtdebj93v0lv6jr93s%40group.calendar.google.com/private-3f6193d9f1d3d700c85ab396bd09fa5f/basic.ics";
-		fileList[1] = "https://www.google.com/calendar/ical/cushi4htofdql5h0hblka5i8og%40group.calendar.google.com/private-9e63b2303566675ef861e39f922fa16e/basic.ics";
-		fileList[2] = "https://www.google.com/calendar/ical/tsuzuki.keita%40gmail.com/private-94a8ece4ec7b1bc37b93f17e34673084/basic.ics";
+		ArrayList<String> fileListArray = ArraysX.readLines("setting.conf", "sjis");
+		String[] fileList = ArraysX.toArray(fileListArray);
+		
+//		fileList[0] = "https://www.google.com/calendar/ical/21gl2ihvhtdebj93v0lv6jr93s%40group.calendar.google.com/private-3f6193d9f1d3d700c85ab396bd09fa5f/basic.ics";
+//		fileList[1] = "https://www.google.com/calendar/ical/cushi4htofdql5h0hblka5i8og%40group.calendar.google.com/private-9e63b2303566675ef861e39f922fa16e/basic.ics";
+//		fileList[2] = "https://www.google.com/calendar/ical/tsuzuki.keita%40gmail.com/private-94a8ece4ec7b1bc37b93f17e34673084/basic.ics";
 
 		Color[] colorList = new Color[3];
 		colorList[0] = new Color(255,163,176);
